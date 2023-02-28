@@ -6,6 +6,7 @@ import instagram from '../../../assets/icons/footer-icons/instagram.png'
 import youtube from '../../../assets/icons/footer-icons/youTube.png'
 import linkedin from '../../../assets/icons/footer-icons/linkedIn.png'
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -13,25 +14,25 @@ const Footer = () => {
             <div className='max-w-[1440px] mx-auto cursor-pointer'>
                 <div className='grid md:grid-cols-3 lg:grid-cols-7 gap-4 gap-y-6 md:gap-y-16'>
                     <div className='lg:col-span-2'>
-                        <img className='w-20 mb-6 mx-auto md:mx-0' src={logo} alt="" />
+                        <Image className='w-20 mb-6 mx-auto md:mx-0' src={logo} alt="footerImage" />
                         <p className='text-gray-500 text-center md:text-left mb-4'>Enim enim integer quam volutpat, a ut fames. Ornare sem egestas tincidunt vitae at nisi ultricies arcu.</p>
 
                         <h1 className='text-black font-bold text-xl text-center md:text-left mb-4'>Follow Us</h1>
                         <div className='flex justify-center md:justify-start items-center gap-4'>
                             <a target='_blank' href="">
-                                <img className='w-3' src={facebook} alt="" />
+                                <Image className='w-3' src={facebook} alt="footerImage" />
                             </a>
                             <a target='_blank' href="">
-                                <img className='w-5' src={instagram} alt="" />
+                                <Image className='w-5' src={instagram} alt="footerImage" />
                             </a>
                             <a target='_blank' href="">
-                                <img className='w-5' src={linkedin} alt="" />
+                                <Image className='w-5' src={linkedin} alt="footerImage" />
                             </a>
                             <a target='_blank' href="">
-                                <img className='w-5' src={youtube} alt="" />
+                                <Image className='w-5' src={youtube} alt="footerImage" />
                             </a>
                             <a target='_blank' href="">
-                                <img className='w-5' src={twitter} alt="" />
+                                <Image className='w-5' src={twitter} alt="footerImage" />
                             </a>
                         </div>
                     </div>

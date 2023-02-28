@@ -6,6 +6,7 @@ import arrowDown from '../../assets/icons/login-register-icons/arrow-down.png'
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import '../../app/globals.css'
+import Image from 'next/image';
 
 const phoneCodes = [
     { country: 'bangladesh', phoneCode: '+880' },
@@ -62,7 +63,7 @@ const index = () => {
                                     <input {...register('region', { required: 'Region is required' })}
                                         className='cursor-pointer w-full text-gray-900 h-full focus:outline-none'
                                         defaultValue={region} value={region} readOnly type="text" name="region" id="region" />
-                                    <img className='w-3' src={arrowDown} alt="" />
+                                    <Image className='w-3' src={arrowDown} alt="" />
                                 </div>
                                 {
                                     openRegion && <div class="absolute right-0 z-10 w-fit rounded bg-gray-50 shadow shadow-gray-400">
@@ -154,7 +155,7 @@ const index = () => {
                                         <input {...register('phoneCode', { required: 'First Name Name is required' })}
                                             className='cursor-pointer w-full text-gray-900 h-full focus:outline-none'
                                             defaultValue={phoneCode} value={phoneCode} readOnly type="text" name="phoneCode" id="phoneCode" />
-                                        <img className='w-3' src={arrowDown} alt="" />
+                                        <Image className='w-3' src={arrowDown} alt="" />
                                     </div>
                                     {
                                         openPhoneCode && <div class="absolute right-0 z-50 w-fit rounded bg-gray-50 shadow shadow-gray-400">
@@ -189,17 +190,17 @@ const index = () => {
                         </button>
                     </form>
                     <div className='flex justify-center items-center gap-2 mt-8'>
-                        <img className='w-32' src={line} alt="" />
+                        <Image className='w-32' src={line} alt="" />
                         <span className='text-gray-600'>or</span>
-                        <img className='w-32' src={line} alt="" />
+                        <Image className='w-32' src={line} alt="" />
                     </div>
                     <div className='flex justify-center items-center gap-6 md:gap-8 mt-8'>
                         <div className='w-36 md:w-52 h-12 border rounded-md flex justify-center items-center gap-4'>
-                            <img className='w-8' src={facebook} alt="" />
+                            <Image className='w-8' src={facebook} alt="" />
                             <h1 className='text-gray-900 font-bold'>Facebook</h1>
                         </div>
                         <div className='w-36 md:w-52 h-12 border rounded-md flex justify-center items-center gap-4'>
-                            <img className='w-8' src={google} alt="" />
+                            <Image className='w-8' src={google} alt="" />
                             <h1 className='text-gray-900 font-bold'>Google</h1>
                         </div>
                     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import right from '../../../assets/icons/buyer-welcome-page-icons/right.png'
 import blueRight from '../../../assets/icons/buyer-welcome-page-icons/blue-right.png'
 import grayRight from '../../../assets/icons/buyer-welcome-page-icons/gray-right.png'
+import Image from 'next/image';
 
 const RegisterComplete = () => {
     return (
@@ -10,7 +11,7 @@ const RegisterComplete = () => {
                 <div className='md:col-span-2 border-b md:border-b-0 md:border-r border-[#1F4B9D]'>
                     <div className='flex items-start gap-2 pb-4'>
                         <div className='flex flex-col justify-start'>
-                            <img className='w-8' src={right} alt="" />
+                            <Image className='w-8' src={right} alt="" />
                         </div>
                         <div className='flex flex-col justify-start gap-5'>
                             <h1 className='text-left text-black font-semibold text-2xl'>Congratulation your registration is complete.</h1>
@@ -27,11 +28,11 @@ const RegisterComplete = () => {
                 </div>
                 <div className='md:col-span-1 flex flex-col justify-start gap-4 p-6'>
                     <div className='flex items-center gap-2'>
-                        <img className='w-6' src={blueRight} alt="" />
+                        <Image className='w-6' src={blueRight} alt="" />
                         <h1 className='text-gray-900 text-xl'>Registration</h1>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <img className='w-6' src={grayRight} alt="" />
+                        <Image className='w-6' src={grayRight} alt="" />
                         <h1 className='text-gray-600 text-xl'>Personalized Profile</h1>
                     </div>
                 </div>

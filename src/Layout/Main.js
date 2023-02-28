@@ -3,6 +3,7 @@ import Navber from '@/components/Shared/Navber/Navber';
 import Footer from '@/components/shared/Footer/Footer';
 import TopNavber from '@/components/Shared/Navber/TopNavber';
 
+
 const Main = ({ components, children }) => {
     return (
         <>

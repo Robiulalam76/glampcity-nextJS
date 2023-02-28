@@ -11,6 +11,7 @@ import icon3 from '../../../assets/icons/trade-servies-icons/img3.png'
 import icon4 from '../../../assets/icons/trade-servies-icons/img4.png'
 import ProductCard from '../../ProductCards/ProductCard';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const products = [
     { id: '15df56', img: img1, title: 'Nike Shoes - Men', price: '3, 999', description: 'Lorem ipsum dolor sit amet consectetur.' },
@@ -29,28 +30,28 @@ const TradeServices = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto'>
                 <div className='border shadow rounded-md p-7 hover:bg-blue-100 bg-white hover:shadow hover:shadow-blue-400 duration-300'>
                     <div className='w-16 h-14 bg-[#E64CB2] mx-auto md:mx-0 flex justify-center items-center'>
-                        <img className='w-8' src={icon1} alt="" />
+                        <Image className='w-8' src={icon1} alt="" />
                     </div>
                     <h1 className='text-gray-900 font-bold text-center md:text-left text-xl mt-6'>Trade Assurance</h1>
                     <p className='text-sm text-gray-500 mt-2 text-center md:text-left'>Select the date you intend to book (<Link href='' className='text-primary'>Click Here</Link>) and the rates and availability of the tent will appear</p>
                 </div>
                 <div className='border shadow rounded-md p-7 hover:bg-blue-100 bg-white hover:shadow hover:shadow-blue-400 duration-300'>
                     <div className='w-16 h-14 bg-[#DA525A] mx-auto md:mx-0 flex justify-center items-center'>
-                        <img className='w-8' src={icon2} alt="" />
+                        <Image className='w-8' src={icon2} alt="" />
                     </div>
                     <h1 className='text-gray-900 font-bold text-center md:text-left text-xl mt-6'>Payment</h1>
                     <p className='text-sm text-gray-500 mt-2 text-center md:text-left'>Click on the respective tent type to view the packages included (e.g Couple Deluxe /Couple Suite / Family Suite / Jumbo Tent)</p>
                 </div>
                 <div className='border shadow rounded-md p-7 hover:bg-blue-100 bg-white hover:shadow hover:shadow-blue-400 duration-300'>
                     <div className='w-16 h-14 bg-[#EFAF65] mx-auto md:mx-0 flex justify-center items-center'>
-                        <img className='w-8' src={icon3} alt="" />
+                        <Image className='w-8' src={icon3} alt="" />
                     </div>
                     <h1 className='text-gray-900 font-bold text-center md:text-left text-xl mt-6'>Inspection Solution</h1>
                     <p className='text-sm text-gray-500 mt-2 text-center md:text-left'>Scroll down to 'Add On' section to view the extra packages available.</p>
                 </div>
                 <div className='border shadow rounded-md p-7 hover:bg-blue-100 bg-white hover:shadow hover:shadow-blue-400 duration-300'>
                     <div className='w-16 h-14 bg-[#4C8DD9] mx-auto md:mx-0 flex justify-center items-center'>
-                        <img className='w-8' src={icon4} alt="" />
+                        <Image className='w-8' src={icon4} alt="" />
                     </div>
                     <h1 className='text-gray-900 font-bold text-center md:text-left text-xl mt-6'>Ocean and Air shi text-centerpmd:ping</h1>
                     <p className='text-sm text-gray-500 mt-2 text-left'>Click 'Book Now' when you are ready to book</p>

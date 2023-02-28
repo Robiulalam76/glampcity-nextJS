@@ -4,6 +4,7 @@ import usa from '../../../assets/icons/navber-icons/usa.png'
 import downArrow from '../../../assets/icons/navber-icons/down-arrow.png'
 import Link from 'next/link';
 import CountryDropdown from '@/components/Dropdowns/NavberDropdowns/CountryDropdown';
+import Image from 'next/image';
 const TopNavber = () => {
     const [countryDropdown, setCountryDropdown] = useState(false)
     const [showRoutes, setShowRoutes] = useState(false)
@@ -31,9 +32,9 @@ const TopNavber = () => {
                 <div className='relative'>
                     <div onClick={() => setCountryDropdown(!countryDropdown)}
                         className='relative flex justify-between items-center gap-3'>
-                        <img className='w-8' src={usa} alt="" />
+                        <Image className='w-8' src={usa} alt="" />
                         <h1 className='text-sm text-gray-500'>USA $</h1>
-                        <img className='w-4' src={downArrow} alt="" />
+                        <Image className='w-4' src={downArrow} alt="" />
                     </div>
                     {
                         countryDropdown && <CountryDropdown closeDropdown={setCountryDropdown} />

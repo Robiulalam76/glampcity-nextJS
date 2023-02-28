@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import love from '../../assets/icons/latest-products-icons/love.png'
 import love2 from '../../assets/icons/love.png'
@@ -15,7 +16,7 @@ const ProductCard = ({ product }) => {
     return (
         <div className='relative w-full mx-auto flex flex-col justify-center items-center gap-2 rounded-xl p-2 hover:bg-blue-100 cursor-pointer hover:shadow hover:shadow-blue-400 duration-300 bg-white mt-6'>
             <div className='relative w-full h-24 md:h-28 overflow-hidden'>
-                <img className='w-full h-24 md:h-28 rounded-xl hover:scale-150 duration-500' src={product.img} alt="" />
+                <Image className='w-full h-24 md:h-28 rounded-xl hover:scale-150 duration-500' src={product.img} alt="" />
 
                 < img className='w-8 absolute top-3 right-3' src={love} alt="" />
             </div>

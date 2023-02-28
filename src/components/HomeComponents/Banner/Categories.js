@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import arrow from '../../../assets/icons/banner-icons/right-arrow.png'
@@ -141,7 +142,7 @@ const Categories = () => {
                         className="group w-full relative">
                         <Link href={`/categories/${category.name}`} className=' hover:bg-gray-300 border-b border-x h-12 w-full flex justify-between items-center px-3 text-gray-900'>
                             <h1 className='font-semibold'>{category.name}</h1>
-                            <img className="w-2" src={arrow} alt="" />
+                            <Image className="w-2" src={arrow} alt="" />
                         </Link>
 
                         <div className='hidden group-focus:block group-hover:block z-50 absolute -right-10 bg-white w-full border-t-8 border-t-primary border-b border-x h-60 overflow-y-auto'>

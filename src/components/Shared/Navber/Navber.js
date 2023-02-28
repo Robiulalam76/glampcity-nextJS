@@ -1,11 +1,12 @@
 'use client';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import logo from '../../../assets/logo/logo.png'
 import love from '../../../assets/icons/navber-icons/love.png'
 import cart from '../../../assets/icons/navber-icons/cart.png'
 // import AddCartItemsDrawer from '../../Drawers/AddCartItemsDrawer/AddCartItemsDrawer';
 // import WishlistDrawer from '../../Drawers/WishlistDrawers/WishlistDrawer';
 import Link from 'next/link';
+import Image from 'next/image';
 const Navber = () => {
 
     const [open, setOpen] = useState(false)
@@ -26,7 +27,7 @@ const Navber = () => {
         <nav ref={navberRef} className='bg-white py-4 uppercase border-b'>
             <div className='relative cursor-pointer flex justify-between items-center gap-6 lg:gap-10 h-14 px-4 md:px-8 max-w-[1440px] mx-auto'>
                 <div className='flex-grow'>
-                    <Link href='/'><img className='w-10 md:w-16' src={logo} alt="" /></Link>
+                    <Link href='/'><Image className='w-10 md:w-16' src={logo} alt="navberImage" /></Link>
                 </div>
                 <div className='hidden lg:block'>
                     <Link href='/home' className='text-black font-semibold'>Home</Link>
@@ -46,7 +47,7 @@ const Navber = () => {
                 <div className='flex justify-between items-center gap-6'>
                     <div>
                         <Link href='/' className='relative'>
-                            <img className='w-5' src={love} alt="" />
+                            <Image className='w-5' src={love} alt="navberImage" />
                             <div className='absolute -right-2 -top-3 h-4 w-4 bg-rose-600 rounded-full flex justify-center items-center'>
                                 <span className='text-white p-1'>
                                     {/* {addWishlist ? addWishlist.length : 0} */}0
@@ -56,7 +57,7 @@ const Navber = () => {
                     </div>
                     <div >
                         <Link href='/' className='relative'>
-                            <img className='w-5' src={cart} alt="" />
+                            <Image className='w-5' src={cart} alt="navberImage" />
                             <div className='absolute -right-2 -top-3 h-4 w-4 bg-rose-600 rounded-full flex justify-center items-center'>
                                 <span className='text-white p-1'>
                                     {/* {addCartItems ? addCartItems.length : 0} */}0

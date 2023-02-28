@@ -3,14 +3,15 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import arrowDown from '../../../assets/icons/login-register-icons/arrow-down.png'
 import img1 from '../../../assets/icons/contact-form-icons/flag1.png'
+import Image from 'next/image';
 
 
 const phoneCodes = [
-    { country: 'bangladesh', phoneCode: '+880', flag: 'https://cdn-icons-png.flaticon.com/128/3955/3955515.png' },
-    { country: 'bangladesh', phoneCode: '+658', flag: 'https://cdn-icons-png.flaticon.com/128/3955/3955515.png' },
-    { country: 'bangladesh', phoneCode: '+452', flag: 'https://cdn-icons-png.flaticon.com/128/3955/3955515.png' },
-    { country: 'bangladesh', phoneCode: '+56', flag: 'https://cdn-icons-png.flaticon.com/128/3955/3955515.png' },
-    { country: 'bangladesh', phoneCode: '+792', flag: 'https://cdn-icons-png.flaticon.com/128/3955/3955515.png' }
+    { country: 'bangladesh', phoneCode: '+880', flag: img1 },
+    { country: 'bangladesh', phoneCode: '+658', flag: img1 },
+    { country: 'bangladesh', phoneCode: '+452', flag: img1 },
+    { country: 'bangladesh', phoneCode: '+56', flag: img1 },
+    { country: 'bangladesh', phoneCode: '+792', flag: img1 }
 ]
 
 const rols = [
@@ -24,7 +25,7 @@ const ContactForm = () => {
     const [phoneCode, setPhoneCode] = useState('')
     const [openRole, setOpenRole] = useState(false)
     const [role, setRole] = useState('seller')
-    const [flag, setFlag] = useState('https://cdn-icons-png.flaticon.com/128/3955/3955515.png')
+    const [flag, setFlag] = useState(img1)
 
     const handleContact = (data) => {
         console.log(data);
@@ -82,8 +83,8 @@ const ContactForm = () => {
                             <div className='flex items-center bg-white border focus:outline-primary rounded'>
                                 <div onClick={() => setOpenPhoneCode(!openPhoneCode)}
                                     className='w-20 h-12 flex items-center gap-2 px-2'>
-                                    <img className='w-7 h-7' src={flag} alt="" />
-                                    <img className='w-3' src={arrowDown} alt="" />
+                                    <Image className='w-7 h-7' height='100%' width='100%' src={flag} alt="navberImage" />
+                                    <Image className='w-3' height='100%' width='100%' src={arrowDown} alt="navberImage" />
                                 </div>
                                 <input {...register('phone', { required: 'Phone Number is required' })}
                                     className='w-full h-12 px-3 border-y border-r rounded-r focus:outline-none' type="number" name="phone" placeholder='Phone Number' />
@@ -98,7 +99,7 @@ const ContactForm = () => {
                                                 <div onClick={() => setFlag(pCode.flag)}>
                                                     <div onClick={() => setPhoneCode(pCode.phoneCode)}
                                                         className='cursor-pointer w-full hover:bg-gray-200 px-2 py-1'>
-                                                        <img className='w-8' src={pCode.flag} alt="" />
+                                                        <Image className='w-8' height='100%' width='100%' src={pCode.flag} alt="" />
                                                     </div>
                                                 </div>
                                             </div>)
@@ -116,7 +117,7 @@ const ContactForm = () => {
                         <input {...register('role')}
                             className='cursor-pointer w-full text-gray-900 h-full px-3 focus:outline-none'
                             defaultValue={role} value={role} readOnly type="text" name="role" />
-                        <img className='w-3 mr-3' src={arrowDown} alt="" />
+                        <Image className='w-3 mr-3' height='100%' width='100%' src={arrowDown} alt="" />
                     </div>
                     {
                         openRole && <div class="absolute right-0 z-10 w-32 rounded bg-gray-50 shadow shadow-gray-400">

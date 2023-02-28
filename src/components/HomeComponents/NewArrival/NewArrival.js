@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import img1 from '../../../assets/images/new-arrival-images/img1.png'
@@ -28,7 +29,7 @@ const NewArrival = () => {
                 {
                     newArrivalProducts.map(product => <Link href='/product-view'
                         className='flex flex-col justify-center items-center gap-2 rounded-xl pb-2 bg-white'>
-                        <img className='w-full md:w-52 h-24 md:h-28 rounded-xl' src={product.img} alt="" />
+                        <Image className='w-full md:w-52 h-24 md:h-28 rounded-xl' src={product.img} alt="" />
                         <span className='text-gray-900 text-sm font-bold text-center'>{product.title}</span>
                         <span className='text-gray-900 text-sm font-bold text-center'>{product.price}$</span>
                     </Link>

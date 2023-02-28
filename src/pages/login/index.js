@@ -5,6 +5,7 @@ import google from '../../assets/icons/login-register-icons/google.png'
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import '../../app/globals.css'
+import Image from 'next/image';
 const index = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const handleLogin = (data) => {
@@ -43,17 +44,17 @@ const index = () => {
                         </button>
                     </form>
                     <div className='flex justify-center items-center gap-2 mt-8'>
-                        <img className='w-32' src={line} alt="" />
+                        <Image className='w-32' src={line} alt="" />
                         <span className='text-gray-600'>or</span>
-                        <img className='w-32' src={line} alt="" />
+                        <Image className='w-32' src={line} alt="" />
                     </div>
                     <div className='flex justify-center items-center gap-6 md:gap-8 mt-8'>
                         <div className='w-36 md:w-52 h-12 border rounded-md flex justify-center items-center gap-4'>
-                            <img className='w-8' src={facebook} alt="" />
+                            <Image className='w-8' src={facebook} alt="" />
                             <h1 className='text-gray-900 font-bold'>Facebook</h1>
                         </div>
                         <div className='w-36 md:w-52 h-12 border rounded-md flex justify-center items-center gap-4'>
-                            <img className='w-8' src={google} alt="" />
+                            <Image className='w-8' src={google} alt="" />
                             <h1 className='text-gray-900 font-bold'>Google</h1>
                         </div>
                     </div>

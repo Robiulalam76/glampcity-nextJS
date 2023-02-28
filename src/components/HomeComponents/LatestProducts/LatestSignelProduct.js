@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import love from '../../../assets/icons/latest-products-icons/love.png'
 import love2 from '../../../assets/icons/love.png'
@@ -8,7 +9,7 @@ const LatestSignelProduct = ({ product }) => {
     return (
         <div className='relative w-full mx-auto flex flex-col justify-center items-start gap-2 rounded-xl p-3 bg-white hover:bg-blue-100 hover:shadow hover:shadow-blue-400 duration-300 cursor-pointer mt-6'>
             <div className='relative w-full h-24 md:h-28 overflow-hidden'>
-                <img className='w-full h-24 md:h-28 rounded-xl hover:scale-150 duration-500' src={product.img} alt="" />
+                <Image className='w-full h-24 md:h-28 rounded-xl hover:scale-150 duration-500' src={product.img} alt="" />
 
                 < img className='w-8 absolute top-3 right-3' src={love} alt="" />
             </div>
@@ -40,7 +41,7 @@ export default LatestSignelProduct;
 //     return (
 //         <div className='relative w-full mx-auto flex flex-col justify-center items-start gap-2 rounded-xl p-3 bg-white hover:bg-blue-100 hover:shadow hover:shadow-blue-400 duration-300 cursor-pointer mt-6'>
 //             <div className='relative w-full h-24 md:h-28 overflow-hidden'>
-//                 <img className='w-full h-24 md:h-28 rounded-xl hover:scale-150 duration-500' src={product.img} alt="" />
+//                 <Image className='w-full h-24 md:h-28 rounded-xl hover:scale-150 duration-500' src={product.img} alt="" />
 //                 {wishlised ?
 //                     < img onClick={() => handleWishlistRemove(product.id)} className='w-8 absolute top-3 right-3' src={love2} alt="" />
 //                     :

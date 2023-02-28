@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import call from '../../../assets/icons/banner-icons/call.png'
 import banner from '../../../assets/images/banner-images/banner.png'
@@ -17,7 +18,7 @@ const Banner = () => {
                         </div>
                         <div className='flex items-center gap-6'>
                             <a href="tel:+ 6511 22 333">
-                                <img className='w-10' src={call} alt="" />
+                                <Image className='w-10' src={call} alt="" />
                             </a>
                             <div className='flex flex-col gap-1'>
                                 <a href="tel:+ 6511 22 333" className='text-sm text-gray-600'>+ 6511 22 333</a>
@@ -27,8 +28,7 @@ const Banner = () => {
                     </div>
 
                     <div className='h-[368px] mt-6'>
-                        <img className='h-[368px] w-full' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24701-nature-natural-beauty.jpg/1280px-24701-nature-natural-beauty.jpg' alt="" />
-                        {/* <img className='h-[368px] w-full' src={banner} alt="" /> */}
+                        <Image className='h-[368px] w-full' src={banner} alt="" />
                     </div>
                 </div>
             </div>

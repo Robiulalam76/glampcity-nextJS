@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import img from '../../../assets/images/future-products-images/img1.png'
 import img1 from '../../../assets/images/new-arrival-images/img1.png'
@@ -22,22 +23,22 @@ const FutureProducts = () => {
             <div className='mt-16 md:mt-28'>
                 <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8'>
                     <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <img className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
                     </div>
                     <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <img className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
                     </div>
                     <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <img className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
                     </div>
                     <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <img className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
                     </div>
                     <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <img className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
                     </div>
                     <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <img className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
                     </div>
                 </div>
                 <div className='flex justify-center items-center bg-primary h-14 md:w-60 mt-20 mx-auto'>

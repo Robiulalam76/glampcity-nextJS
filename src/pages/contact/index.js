@@ -5,6 +5,7 @@ import location from '../../assets/images/contact-page-images/location.png'
 import call from '../../assets/images/contact-page-images/call.png'
 import { useForm } from 'react-hook-form';
 import '../../app/globals.css'
+import Image from 'next/image';
 
 const index = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -14,12 +15,12 @@ const index = () => {
     return (
         <section className='max-w-[1440px] mx-auto cursor-pointer'>
             <div>
-                <img className='w-full h-80' src={img1} alt="" />
+                <Image className='w-full h-80' src={img1} alt="aboutImage" />
             </div>
 
             <div className='grid md:grid-cols-3 gap-4 mt-10 px-4 max-w-[1200px] mx-auto'>
                 <div className='w-full h-60 mx-auto border-2 shadow-sm flex flex-col justify-center items-center gap-4'>
-                    <img className='w-20' src={message} alt="" />
+                    <Image className='w-20' src={message} alt="aboutImage" />
                     <h1 className='text-black font-bold text-2xl text-center'>Email Address</h1>
                     <div className=''>
                         <h1 className='text-xl text-center text-black'>info@webmail.com</h1>
@@ -27,7 +28,7 @@ const index = () => {
                     </div>
                 </div>
                 <div className='w-full h-60 mx-auto border-2 shadow-sm flex flex-col justify-center items-center gap-4'>
-                    <img className='w-20' src={location} alt="" />
+                    <Image className='w-20' src={location} alt="aboutImage" />
                     <h1 className='text-black font-bold text-2xl text-center'>Office Address</h1>
                     <div className=''>
                         <h1 className='text-xl text-center text-black'>18/A, New Born Town Hall</h1>
@@ -35,7 +36,7 @@ const index = () => {
                     </div>
                 </div>
                 <div className='w-full h-60 mx-auto border-2 shadow-sm flex flex-col justify-center items-center gap-4'>
-                    <img className='w-20' src={call} alt="" />
+                    <Image className='w-20' src={call} alt="aboutImage" />
                     <h1 className='text-black font-bold text-2xl text-center'>Phone Number</h1>
                     <div className=''>
                         <a href='tel:+0123-456789' className='text-xl text-center text-black block'>+0123-456789</a>

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Drawer } from 'antd';
 import { SidebarContext } from '../../../ContextAPI/SidebarProvider';
+import Image from 'next/image';
 
 const AddCartItemsDrawer = () => {
     const { addCartItemsDrawerOpen, setAddCartItemsDrawerOpen, addCartItems } = useContext(SidebarContext)
@@ -21,7 +22,7 @@ const AddCartItemsDrawer = () => {
                             {addCartItems.map((product) => (
                                 <li key={product.id} className="flex py-6">
                                     <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                        <img
+                                        <Image
                                             src={product.img}
                                             alt=''
                                             className="h-full w-full object-cover object-center"

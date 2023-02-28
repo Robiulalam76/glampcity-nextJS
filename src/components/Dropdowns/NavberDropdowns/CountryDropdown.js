@@ -1,12 +1,14 @@
+import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
+import img from '../../../assets/icons/navber-icons/bd.png'
 
 
 const countries = [
-    { shortName: 'BD', fullName: 'Bangladesh', img: 'https://cdn-icons-png.flaticon.com/128/7826/7826304.png' },
-    { shortName: 'US', fullName: 'United State', img: 'https://cdn-icons-png.flaticon.com/128/7826/7826304.png' },
-    { shortName: 'PK', fullName: 'Pakistan', img: 'https://cdn-icons-png.flaticon.com/128/7826/7826304.png' },
-    { shortName: 'ID', fullName: 'Idia', img: 'https://cdn-icons-png.flaticon.com/128/7826/7826304.png' },
-    { shortName: 'BD', fullName: 'Bangladesh', img: 'https://cdn-icons-png.flaticon.com/128/7826/7826304.png' },
+    { shortName: 'BD', fullName: 'Bangladesh', img: img },
+    { shortName: 'US', fullName: 'United State', img: img },
+    { shortName: 'PK', fullName: 'Pakistan', img: img },
+    { shortName: 'ID', fullName: 'Idia', img: img },
+    { shortName: 'BD', fullName: 'Bangladesh', img: img },
 ]
 const CountryDropdown = ({ closeDropdown }) => {
 
@@ -27,7 +29,7 @@ const CountryDropdown = ({ closeDropdown }) => {
             <div className=''>
                 {
                     countries && countries.map(country => <div className='grid grid-cols-4 hover:bg-gray-200 px-2 py-1'>
-                        <img className='w-5 rounded-full' src={country.img} alt="" />
+                        <Image className='w-5 rounded-full' height={70} width={70} src={country.img} alt="" />
                         <h1 className='col-span-3 text-left text-black font-semibold text-sm'>{country.fullName}</h1>
                     </div>)
                 }

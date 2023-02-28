@@ -3,6 +3,7 @@ import icon1 from '../../assets/icons/frequently-ask-icons/icon1.png'
 import upArrow from '../../assets/icons/frequently-ask-icons/up-arrow.png'
 import downArrow from '../../assets/icons/login-register-icons/arrow-down.png'
 import '../../app/globals.css'
+import Image from 'next/image';
 
 const FAQ = () => {
     const [open1, setOpen1] = useState(true)
@@ -19,14 +20,14 @@ const FAQ = () => {
                     <div onClick={() => setOpen1(!open1)}
                         className='flex justify-between items-center border-b border-[#0029FF4D] mx-3 py-3 px-3 md:mx-6 md:py-6 md:px-4 cursor-pointer' >
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 md:w-10' src={icon1} alt="" />
+                            <Image className='w-8 md:w-10' src={icon1} alt="" />
                             <h1 className='md:text-xl font-semibold md:font-bold text-gray-900'>Camping Permit</h1>
                         </div>
                         <div>
                             {
-                                open1 ? <img className='w-5' src={downArrow} alt="" />
+                                open1 ? <Image className='w-5' src={downArrow} alt="" />
                                     :
-                                    <img className='w-6' src={upArrow} alt="" />
+                                    <Image className='w-6' src={upArrow} alt="" />
                             }
                         </div>
                     </div>
@@ -43,14 +44,14 @@ const FAQ = () => {
                     <div onClick={() => setOpen2(!open2)}
                         className='flex justify-between items-center border-b border-[#0029FF4D] mx-3 py-3 px-3 md:mx-6 md:py-6 md:px-4 cursor-pointer' >
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 md:w-10' src={icon1} alt="" />
+                            <Image className='w-8 md:w-10' src={icon1} alt="" />
                             <h1 className='md:text-xl font-semibold md:font-bold text-gray-900'>Rental Duration</h1>
                         </div>
                         <div>
                             {
-                                open2 ? <img className='w-5' src={downArrow} alt="" />
+                                open2 ? <Image className='w-5' src={downArrow} alt="" />
                                     :
-                                    <img className='w-6' src={upArrow} alt="" />
+                                    <Image className='w-6' src={upArrow} alt="" />
                             }
                         </div>
                     </div>
@@ -68,14 +69,14 @@ const FAQ = () => {
                     <div onClick={() => setOpen3(!open3)}
                         className='flex justify-between items-center border-b border-[#0029FF4D] mx-3 py-3 px-3 md:mx-6 md:py-6 md:px-4 cursor-pointer' >
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 md:w-10' src={icon1} alt="" />
+                            <Image className='w-8 md:w-10' src={icon1} alt="" />
                             <h1 className='md:text-xl font-semibold md:font-bold text-gray-900'>Glamping Area @ East Coast Park</h1>
                         </div>
                         <div>
                             {
-                                open3 ? <img className='w-5' src={downArrow} alt="" />
+                                open3 ? <Image className='w-5' src={downArrow} alt="" />
                                     :
-                                    <img className='w-6' src={upArrow} alt="" />
+                                    <Image className='w-6' src={upArrow} alt="" />
                             }
                         </div>
                     </div>
@@ -93,14 +94,14 @@ const FAQ = () => {
                     <div onClick={() => setOpen4(!open4)}
                         className='flex justify-between items-center border-b border-[#0029FF4D] mx-3 py-3 px-3 md:mx-6 md:py-6 md:px-4 cursor-pointer' >
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 md:w-10' src={icon1} alt="" />
+                            <Image className='w-8 md:w-10' src={icon1} alt="" />
                             <h1 className='md:text-xl font-semibold md:font-bold text-gray-900'>BBQ pit</h1>
                         </div>
                         <div>
                             {
-                                open4 ? <img className='w-5' src={downArrow} alt="" />
+                                open4 ? <Image className='w-5' src={downArrow} alt="" />
                                     :
-                                    <img className='w-6' src={upArrow} alt="" />
+                                    <Image className='w-6' src={upArrow} alt="" />
                             }
                         </div>
                     </div>
@@ -116,14 +117,14 @@ const FAQ = () => {
                     <div onClick={() => setOpen5(!open5)}
                         className='flex justify-between items-center border-b border-[#0029FF4D] mx-3 py-3 px-3 md:mx-6 md:py-6 md:px-4 cursor-pointer' >
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 md:w-10' src={icon1} alt="" />
+                            <Image className='w-8 md:w-10' src={icon1} alt="" />
                             <h1 className='md:text-xl font-semibold md:font-bold text-gray-900'>Rules and Regulations</h1>
                         </div>
                         <div>
                             {
-                                open5 ? <img className='w-5' src={downArrow} alt="" />
+                                open5 ? <Image className='w-5' src={downArrow} alt="" />
                                     :
-                                    <img className='w-6' src={upArrow} alt="" />
+                                    <Image className='w-6' src={upArrow} alt="" />
                             }
                         </div>
                     </div>
@@ -139,14 +140,14 @@ const FAQ = () => {
                     <div onClick={() => setOpen6(!open6)}
                         className='flex justify-between items-center border-b border-[#0029FF4D] mx-3 py-3 px-3 md:mx-6 md:py-6 md:px-4 cursor-pointer' >
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 md:w-10' src={icon1} alt="" />
+                            <Image className='w-8 md:w-10' src={icon1} alt="" />
                             <h1 className='md:text-xl font-semibold md:font-bold text-gray-900'>Bad Weather</h1>
                         </div>
                         <div>
                             {
-                                open6 ? <img className='w-5' src={downArrow} alt="" />
+                                open6 ? <Image className='w-5' src={downArrow} alt="" />
                                     :
-                                    <img className='w-6' src={upArrow} alt="" />
+                                    <Image className='w-6' src={upArrow} alt="" />
                             }
                         </div>
                     </div>

@@ -22,6 +22,7 @@ import "./country.module.css"
 
 // import required modules
 import { Autoplay, FreeMode, Pagination } from "swiper";
+import Image from "next/image";
 
 const CountryOrRegion = () => {
     return (
@@ -30,34 +31,34 @@ const CountryOrRegion = () => {
                 <h1 className='text-center font-bold text-gray-900 text-3xl mb-9'>Suppliers by country or region</h1>
                 <div className='grid grid-cols-3 md:grid-cols-5 gap-7 mt-16'>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img1} alt="" />
+                        <Image className='w-full h-full' src={img1} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img2} alt="" />
+                        <Image className='w-full h-full' src={img2} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img3} alt="" />
+                        <Image className='w-full h-full' src={img3} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img4} alt="" />
+                        <Image className='w-full h-full' src={img4} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img5} alt="" />
+                        <Image className='w-full h-full' src={img5} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img6} alt="" />
+                        <Image className='w-full h-full' src={img6} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img7} alt="" />
+                        <Image className='w-full h-full' src={img7} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img8} alt="" />
+                        <Image className='w-full h-full' src={img8} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img9} alt="" />
+                        <Image className='w-full h-full' src={img9} alt="" />
                     </div>
                     <div className='mx-auto'>
-                        <img className='w-full h-full' src={img10} alt="" />
+                        <Image className='w-full h-full' src={img10} alt="" />
                     </div>
                 </div>
             </div>
@@ -74,16 +75,16 @@ const CountryOrRegion = () => {
                     modules={[Autoplay, FreeMode]}
                     className="mySwiper"
                 >
-                    <SwiperSlide><img className='' src={img1} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img3} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img4} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img5} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img6} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img7} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img8} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img9} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='' src={img10} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img1} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img2} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img3} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img4} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img5} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img6} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img7} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img8} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img9} alt="" /></SwiperSlide>
+                    <SwiperSlide><Image className='' src={img10} alt="" /></SwiperSlide>
                 </Swiper>
             </div>
         </section>

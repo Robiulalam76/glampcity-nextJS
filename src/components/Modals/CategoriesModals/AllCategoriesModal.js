@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import arrow from '../../../assets/icons/banner-icons/right-arrow.png'
@@ -30,7 +31,7 @@ const AllCategoriesModal = ({ allCategories, closeModal }) => {
                         allCategories.map(category => <Link href='' className="group relative w-full">
                             <div className=' hover:bg-gray-300 border-b border-x h-12 w-full flex justify-between items-center px-3 text-gray-900'>
                                 <h1 className='font-semibold'>{category.name}</h1>
-                                <img className="w-2" src={arrow} alt="" />
+                                <Image className="w-2" src={arrow} alt="" />
                             </div>
 
                             <Link href=''
