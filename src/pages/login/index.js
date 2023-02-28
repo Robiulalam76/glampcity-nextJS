@@ -4,6 +4,7 @@ import facebook from '../../assets/icons/login-register-icons/facebook.png'
 import google from '../../assets/icons/login-register-icons/google.png'
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import '../../app/globals.css'
 const index = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const handleLogin = (data) => {

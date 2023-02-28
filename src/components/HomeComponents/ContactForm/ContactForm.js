@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+"use client"
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import arrowDown from '../../../assets/icons/login-register-icons/arrow-down.png'
 import img1 from '../../../assets/icons/contact-form-icons/flag1.png'

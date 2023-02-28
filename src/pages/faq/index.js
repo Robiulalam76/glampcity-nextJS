@@ -1,11 +1,10 @@
-"use client"
 import { useState } from 'react';
-import icon1 from '../../../assets/icons/frequently-ask-icons/icon1.png'
-import upArrow from '../../../assets/icons/frequently-ask-icons/up-arrow.png'
-import downArrow from '../../../assets/icons/login-register-icons/arrow-down.png'
+import icon1 from '../../assets/icons/frequently-ask-icons/icon1.png'
+import upArrow from '../../assets/icons/frequently-ask-icons/up-arrow.png'
+import downArrow from '../../assets/icons/login-register-icons/arrow-down.png'
+import '../../app/globals.css'
 
-
-const FrequentlyAsk = () => {
+const FAQ = () => {
     const [open1, setOpen1] = useState(true)
     const [open2, setOpen2] = useState(false)
     const [open3, setOpen3] = useState(false)
@@ -164,4 +163,4 @@ const FrequentlyAsk = () => {
     );
 };
 
-export default FrequentlyAsk;
+export default FAQ;

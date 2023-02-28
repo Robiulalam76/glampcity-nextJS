@@ -5,6 +5,7 @@ import google from '../../assets/icons/login-register-icons/google.png'
 import arrowDown from '../../assets/icons/login-register-icons/arrow-down.png'
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import '../../app/globals.css'
 
 const phoneCodes = [
     { country: 'bangladesh', phoneCode: '+880' },

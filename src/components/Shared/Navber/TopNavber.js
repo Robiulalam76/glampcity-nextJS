@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import usa from '../../../assets/icons/navber-icons/usa.png'
 import downArrow from '../../../assets/icons/navber-icons/down-arrow.png'
 import Link from 'next/link';
@@ -7,22 +7,6 @@ import CountryDropdown from '@/components/Dropdowns/NavberDropdowns/CountryDropd
 const TopNavber = () => {
     const [countryDropdown, setCountryDropdown] = useState(false)
     const [showRoutes, setShowRoutes] = useState(false)
-    const closeDropdown = () => {
-        setCountryDropdown(false)
-    }
-
-    let dropdownRef = useRef();
-    useEffect(() => {
-        let handler = (e) => {
-            if (!dropdownRef.current.contains(e.target)) {
-                setShowRoutes(false);
-            }
-        };
-        document.addEventListener("mousedown", handler);
-        return () => {
-            document.removeEventListener("mousedown", handler);
-        }
-    });
 
     return (
         <nav className='bg-[#E5EAFF57] cursor-pointer'>
@@ -31,7 +15,7 @@ const TopNavber = () => {
                 <div className=''>
                     <button onClick={() => setShowRoutes(!showRoutes)} className='bg-primary text-white py-2 px-2'>Routes</button>
                     {
-                        showRoutes && <div ref={dropdownRef} class="absolute md:right-60 z-50 w-fit rounded bg-gray-50 shadow shadow-gray-400 border grid grid-cols-1">
+                        showRoutes && <div class="absolute md:right-60 z-50 w-fit rounded bg-gray-50 shadow shadow-gray-400 border grid grid-cols-1">
                             <Link href='/company-profile' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>Company Profile</Link>
                             <Link href='/messages' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>messages</Link>
                             <Link href='/shopping-carts' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>shopping carts</Link>
@@ -52,7 +36,7 @@ const TopNavber = () => {
                         <img className='w-4' src={downArrow} alt="" />
                     </div>
                     {
-                        countryDropdown && <CountryDropdown closeDropdown={closeDropdown} />
+                        countryDropdown && <CountryDropdown closeDropdown={setCountryDropdown} />
                     }
                 </div>
             </div>

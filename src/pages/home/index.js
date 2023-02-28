@@ -7,6 +7,11 @@ import TopRanking from '@/components/HomeComponents/TopRanking/TopRanking';
 import TradeServices from '@/components/HomeComponents/TradeServices/TradeServices';
 import React from 'react';
 import Banner from '../../components/HomeComponents/Banner/Banner'
+import '../../app/globals.css'
+import ContactForm from '@/components/HomeComponents/ContactForm/ContactForm';
+import FrequentlyAsk from '@/components/HomeComponents/FrequentlyAsk/FrequentlyAsk';
+import FooterInbox from '@/components/HomeComponents/FooterInbox/FooterInbox';
+
 
 const index = () => {
     return (
@@ -14,7 +19,7 @@ const index = () => {
             <div className='bg-[#faf8f8]'>
                 <div className='max-w-[1440px] mx-auto px-3 md:px-8'>
                     <Banner />
-                    <section className='grid md:grid-cols-2 gap-4 mt-16'>
+                    <section section className='grid md:grid-cols-2 gap-4 mt-16'>
                         <NewArrival />
                         <TopRanking />
                     </section>
@@ -26,6 +31,22 @@ const index = () => {
                 </div>
             </div>
 
+            <div className='bg-[#0029FF1F]'>
+                <div className='max-w-[1440px] mx-auto px-3 md:px-8'>
+                    <ContactForm />
+                </div>
+            </div>
+            <div className='bg-white'>
+                <div className='max-w-[1440px] mx-auto px-3 md:px-8'>
+                    <FrequentlyAsk />
+                </div>
+            </div>
+
+            <div className='bg-[#3432FF]'>
+                <div className='max-w-[1440px] mx-auto px-3 md:px-8'>
+                    <FooterInbox />
+                </div>
+            </div>
         </section>
     );
 };

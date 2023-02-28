@@ -1,22 +1,16 @@
-import Footer from '@/components/shared/Footer/Footer'
-import Navber from '@/components/Shared/Navber/Navber'
-import TopNavber from '@/components/Shared/Navber/TopNavber'
 import './globals.css'
-import Home from '../pages/home/index'
+import Main from '@/Layout/Main'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
+      {/*
+        <head /> will contain the components returned by the nearest parent
+        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
+      */}
       <head />
-      <body className=''>
-        <TopNavber />
-        <Navber />
-        <main>
-          {/* {children} */}
-          <Home />
-        </main>
-        <Footer />
+      <body>
+        <Main />
       </body>
     </html>
   )
