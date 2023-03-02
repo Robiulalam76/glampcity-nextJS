@@ -1,5 +1,5 @@
 import React from 'react';
-import line from '../../assets/icons/login-register-icons/line.png'
+import hrLine from '../../assets/icons/login-register-icons/hrLine.png'
 import facebook from '../../assets/icons/login-register-icons/facebook.png'
 import google from '../../assets/icons/login-register-icons/google.png'
 import { useForm } from 'react-hook-form';
@@ -44,9 +44,9 @@ const index = () => {
                         </button>
                     </form>
                     <div className='flex justify-center items-center gap-2 mt-8'>
-                        <Image className='w-32' src={line} alt="" />
+                        <Image className='w-32' src={hrLine} alt="" />
                         <span className='text-gray-600'>or</span>
-                        <Image className='w-32' src={line} alt="" />
+                        <Image className='w-32' src={hrLine} alt="" />
                     </div>
                     <div className='flex justify-center items-center gap-6 md:gap-8 mt-8'>
                         <div className='w-36 md:w-52 h-12 border rounded-md flex justify-center items-center gap-4'>
