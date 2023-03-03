@@ -6,13 +6,29 @@ import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import '../../app/globals.css'
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { setName } from '@/Slices/controllerSlice';
 const index = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const handleLogin = (data) => {
         console.log(data);
     }
+
+
+    const { name } = useSelector((state) => state.controllerSlice)
+    const dispatch = useDispatch()
+    const submitData = () => {
+        dispatch(setName('Sakil Khan'))
+    }
+
     return (
         <div className='bg-[#F5F5F5] min-w-full md:min-h-screen'>
+
+            <div>
+                <h1>my name is: {name}</h1>
+                <input type="text" onChange={(e) => dispatch(setName(e.target.value))} />
+                <button onClick={() => submitData()}>submit</button>
+            </div>
             <div className='max-w-[1440px] mx-auto md:pt-16'>
                 <div className='w-full md:w-[550px] bg-white py-8 rouonded-xl md:shadow-md md:border mx-auto'>
                     <h1 className='text-3xl font-bold text-center text-primary py-6'>Log In</h1>

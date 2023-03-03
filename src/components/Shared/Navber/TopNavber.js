@@ -5,6 +5,8 @@ import downArrow from '../../../assets/icons/navber-icons/down-arrow.png'
 import Link from 'next/link';
 import CountryDropdown from '@/components/Dropdowns/NavberDropdowns/CountryDropdown';
 import Image from 'next/image';
+import '../../../app/globals.css'
+
 const TopNavber = () => {
     const [countryDropdown, setCountryDropdown] = useState(false)
     const [showRoutes, setShowRoutes] = useState(false)

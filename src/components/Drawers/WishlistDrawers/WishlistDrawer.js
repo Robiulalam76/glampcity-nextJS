@@ -1,17 +1,20 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Drawer } from 'antd';
-import { SidebarContext } from '../../../ContextAPI/SidebarProvider';
+import { useDispatch, useSelector } from 'react-redux';
+import { setOpenWishlistSidebar } from '@/Slices/controllerSlice';
 
 const WishlistDrawer = () => {
-    const { wishlistDrawerOpen, setWishlistDrawerOpen } = useContext(SidebarContext)
+    const { openWishlistSidebar } = useSelector((state) => state.controllerSlice)
+    const dispatch = useDispatch()
+
     return (
         <Drawer
             placement='right'
-            visible={wishlistDrawerOpen}
+            visible={openWishlistSidebar}
             title='Wishlist Products'
             closable={true}
             width='380px'
-            onClose={() => setWishlistDrawerOpen(false)}
+            onClose={() => dispatch(setOpenWishlistSidebar(false))}
         >
         </Drawer>
     );

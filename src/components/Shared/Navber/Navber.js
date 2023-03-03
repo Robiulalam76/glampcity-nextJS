@@ -3,11 +3,15 @@ import { useEffect, useRef, useState } from 'react';
 import logo from '../../../assets/logo/logo.png'
 import love from '../../../assets/icons/navber-icons/love.png'
 import cart from '../../../assets/icons/navber-icons/cart.png'
-// import AddCartItemsDrawer from '../../Drawers/AddCartItemsDrawer/AddCartItemsDrawer';
-// import WishlistDrawer from '../../Drawers/WishlistDrawers/WishlistDrawer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { setOpenAddCartItemsSidebar, setOpenWishlistSidebar } from '@/Slices/controllerSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import WishlistDrawer from '@/components/Drawers/WishlistDrawers/WishlistDrawer';
+import AddCartItemsDrawer from '@/components/Drawers/AddCartItemsDrawer/AddCartItemsDrawer';
 const Navber = () => {
+    const { wishlistItems, cartItems } = useSelector((state) => state.controllerSlice)
+    const dispatch = useDispatch()
 
     const [open, setOpen] = useState(false)
 
@@ -45,25 +49,26 @@ const Navber = () => {
                     <Link href='/faq' className='text-black font-semibold'>FAQ</Link>
                 </div>
                 <div className='flex justify-between items-center gap-6'>
-                    <div>
-                        <Link href='/' className='relative'>
+                    <div onClick={() => dispatch(setOpenWishlistSidebar(true))} >
+                        <div className='relative'>
                             <Image className='w-5' src={love} alt="navberImage" />
                             <div className='absolute -right-2 -top-3 h-4 w-4 bg-rose-600 rounded-full flex justify-center items-center'>
                                 <span className='text-white p-1'>
-                                    {/* {addWishlist ? addWishlist.length : 0} */}0
+                                    {wishlistItems ? wishlistItems.length : 0}
                                 </span>
                             </div>
-                        </Link>
+                        </div>
                     </div>
-                    <div >
-                        <Link href='/' className='relative'>
+
+                    <div onClick={() => dispatch(setOpenAddCartItemsSidebar(true))}>
+                        <div className='relative'>
                             <Image className='w-5' src={cart} alt="navberImage" />
                             <div className='absolute -right-2 -top-3 h-4 w-4 bg-rose-600 rounded-full flex justify-center items-center'>
                                 <span className='text-white p-1'>
-                                    {/* {addCartItems ? addCartItems.length : 0} */}0
+                                    {cartItems ? cartItems.length : 0}
                                 </span>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 </div>
                 <div className='hidden lg:block lg:flex justify-between items-center gap-6'>
@@ -116,8 +121,8 @@ const Navber = () => {
                 </div>
             </div>
 
-            {/* <AddCartItemsDrawer />
-            <WishlistDrawer /> */}
+            <AddCartItemsDrawer />
+            <WishlistDrawer />
         </nav>
     );
 };

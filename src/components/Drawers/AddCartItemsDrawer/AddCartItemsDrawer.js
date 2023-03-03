@@ -1,29 +1,38 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Drawer } from 'antd';
-import { SidebarContext } from '../../../ContextAPI/SidebarProvider';
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCartItems, setOpenAddCartItemsSidebar } from '@/Slices/controllerSlice';
 
 const AddCartItemsDrawer = () => {
-    const { addCartItemsDrawerOpen, setAddCartItemsDrawerOpen, addCartItems } = useContext(SidebarContext)
+    const { openAddCartItemsSidebar, cartItems } = useSelector((state) => state.controllerSlice)
+    const dispatch = useDispatch()
+
+    const handleCartItemRemove = (id) => {
+        const getCartItems = cartItems.filter(w => w.id !== id)
+        dispatch(setCartItems(getCartItems))
+    }
+
+
     return (
         <Drawer
             placement='right'
-            visible={addCartItemsDrawerOpen}
+            visible={openAddCartItemsSidebar}
             title='Cart Items'
             closable={true}
             width='380px'
-            onClose={() => setAddCartItemsDrawerOpen(false)}
+            onClose={() => dispatch(setOpenAddCartItemsSidebar(false))}
         >
 
             <div className="pointer-events-auto w-full">
                 <div className="flex h-full flex-col overflow-y-auto">
                     <div className="flex-1 overflow-y-auto py-6">
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
-                            {addCartItems.map((product) => (
-                                <li key={product.id} className="flex py-6">
+                            {cartItems && cartItems.map((product) => (
+                                <li key={product?.id} className="flex py-6">
                                     <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                         <Image
-                                            src={product.img}
+                                            src={product?.img}
                                             alt=''
                                             className="h-full w-full object-cover object-center"
                                         />
@@ -33,23 +42,22 @@ const AddCartItemsDrawer = () => {
                                         <div>
                                             <div className="flex justify-between text-base font-medium text-gray-900">
                                                 <h3>
-                                                    <a href={product.href}>{product.title}</a>
+                                                    <a href=''>{product?.title}</a>
                                                 </h3>
-                                                <p className="ml-4">{product.price}</p>
+                                                <p className="ml-4">{product?.price}</p>
                                             </div>
                                             <p className="mt-1 text-sm text-gray-500">blue</p>
                                         </div>
                                         <div className="flex flex-1 items-end justify-between text-sm">
                                             <p className="text-gray-500">Qty 1</p>
 
-                                            <div className="flex">
-                                                <button
-                                                    type="button"
+                                            <button onClick={() => handleCartItemRemove(product?.id)} className="flex" type="button" >
+                                                <span
                                                     className="font-medium text-indigo-600 hover:text-indigo-500"
                                                 >
                                                     Remove
-                                                </button>
-                                            </div>
+                                                </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </li>
