@@ -22,7 +22,7 @@ const LatestSignelProduct = ({ product, wishlistItem }) => {
                 {wishlised ?
                     < Image onClick={() => handleWishlistRemove(product.id)} className='w-8 absolute top-3 right-3' src={love2} alt="" />
                     :
-                    < Image onClick={() => dispatch(setAddWishlist([...wishlistItem, product]))} className='w-8 absolute top-3 right-3' src={love} alt="" />
+                    < Image onClick={() => dispatch(setWishlistItems([...wishlistItem, product]))} className='w-8 absolute top-3 right-3' src={love} alt="" />
                 }
             </div>
             <div className='flex flex-col items-start gap-2'>

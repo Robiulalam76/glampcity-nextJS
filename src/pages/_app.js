@@ -6,5 +6,10 @@ export default function MyApp({ Component, pageProps }) {
         <Main>
             <Component {...pageProps} />
         </Main>
+
+        // <Main pageProps={pageProps}>
+        //     <Component {...pageProps} key={router.route} />
+        // </Main>
+
     )
 }
