@@ -2,17 +2,7 @@ import React from 'react';
 
 const ProductDetails = () => {
     return (
-        <section className='mt-32'>
-            <div className='flex items-center gap-8'>
-                <button className='flex justify-center items-center w-56 h-14 bg-primary'>
-                    <span className='text-md text-white'>Product details</span>
-                </button>
-                <button className='flex justify-center items-center w-56 h-14 border border-primary'>
-                    <span className='text-md text-primary'>Company profile</span>
-                </button>
-            </div>
-            <hr className='my-6' />
-
+        <section className='mt-16'>
             <div>
                 <h1 className='text-2xl text-black font-semibold text-left mb-4'>Overview</h1>
 

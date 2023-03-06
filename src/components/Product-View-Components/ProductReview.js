@@ -9,29 +9,24 @@ import img2 from '../../assets/images/product-details/product-images/img2.png'
 import img3 from '../../assets/images/product-details/product-images/img3.png'
 import img4 from '../../assets/images/product-details/product-images/img4.png'
 import Image from 'next/image';
-
-
-const images = [
-    'https://i.postimg.cc/x1DwgCZd/img2.png',
-    'https://i.postimg.cc/cHbj34Y0/img1.png',
-    'https://i.postimg.cc/6TsmHjYP/img3.png',
-    'https://i.postimg.cc/6QzF9hp7/img4.png'
-]
+import { useDispatch, useSelector } from 'react-redux';
+import { setSelectedImage } from '@/Slices/viewProductSlice';
 
 const ProductReview = () => {
-    const [viewImage, setViewImage] = useState('https://i.postimg.cc/x1DwgCZd/img2.png')
+    const { images, selectedImage } = useSelector((state) => state.viewProductSlice)
+    const dispatch = useDispatch()
     return (
         <section className='mt-8'>
             <div className='grid md:grid-cols-2 lg:grid-cols-10 gap-5 cursor-pointer'>
                 <div className='lg:col-span-3 border rounded-md w-full'>
                     <div>
-                        <Image className='w-full h-96' src={viewImage} alt="" />
+                        <img className='w-full h-96' src='https://i.postimg.cc/x1DwgCZd/img1.png' alt="" />
                     </div>
                     <div className='grid grid-cols-4 gap-4 p-4'>
                         {
-                            images.map(img => <div onClick={() => setViewImage(img)}
+                            images.map(img => <div
                                 className='w-full h-full'>
-                                <Image className='w-full h-full' src={img} alt="" />
+                                <img className='w-full h-full' src='https://i.postimg.cc/x1DwgCZd/img1.png' alt="" />
                             </div>)
                         }
                     </div>

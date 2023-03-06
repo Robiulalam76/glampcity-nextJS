@@ -25,6 +25,8 @@ const TopNavber = () => {
                             <Link href='/product-view' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>product view</Link>
                             <Link href='/answare-to-next' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>answare-to-next</Link>
                             <Link href='/buyer' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>buyer</Link>
+                            <Link href='/customer-support' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>customer-support</Link>
+                            <Link href='/buyer-reviews' className='bg-gray-200 py-2 px-3 hover:bg-primary hover:text-white text-left'>Buyer Reviews</Link>
                         </div>
                     }
                 </div>

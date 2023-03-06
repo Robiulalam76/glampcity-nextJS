@@ -1,16 +1,20 @@
+import Link from 'next/link';
 import React from 'react';
 
 
 const CompanyOverview = () => {
     return (
         <section className='mt-6 md:mt-32'>
-            <div className='flex items-center gap-8'>
-                <button className='flex justify-center items-center w-56 h-14 border border-primary'>
+            <div className='flex items-center gap-8 mt-16'>
+                <Link href='/product-details' className='flex justify-center items-center w-56 h-14 border border-primary'>
                     <span className='text-md text-primary'>Product details</span>
-                </button>
-                <button className='flex justify-center items-center w-56 h-14 bg-primary'>
+                </Link>
+                <Link href='/company-profile' className='flex justify-center items-center w-56 h-14 bg-primary'>
                     <span className='text-md text-white'>Company profile</span>
-                </button>
+                </Link>
+                <Link href='/buyer-reviews' className='flex justify-center items-center w-56 h-14 border border-primary'>
+                    <span className='text-md text-primary'>Buyer Reviews</span>
+                </Link>
             </div>
             <hr className='my-6' />
 
