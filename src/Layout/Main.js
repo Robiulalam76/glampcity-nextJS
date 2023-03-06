@@ -13,7 +13,7 @@ const Main = ({ components, children }) => {
                 <TopNavber />
                 <Navber />
                 <main>{components, children}</main>
-                <Footer />
+                {/* <Footer /> */}
             </Provider>
         </>
     );
