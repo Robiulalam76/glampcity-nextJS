@@ -10,7 +10,7 @@ const CompanyProfile = () => {
     return (
         <section className=''>
             <div className='bg-white'>
-                <div className='max-w-[1440px] mx-auto px-3 md:px-8'>
+                <div className='max-w-[1440px] mx-auto px-4 md:px-8'>
                     <CompanyOverview />
                     <ProductCapacity />
                     <RDCapacity />
