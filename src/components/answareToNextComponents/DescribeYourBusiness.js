@@ -1,7 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useAuth } from '@/Hooks/getAuth';
+import { setNextIncrease } from '@/Slices/loginRegisterSlice';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 
-const DescribeYourBusiness = ({ nextIncrease, handleData }) => {
+const DescribeYourBusiness = () => {
+    const dispatch = useDispatch()
+    const userInfo = useAuth()
+
+
     const [data1, setData1] = useState('')
     const [data2, setData2] = useState('')
     const [data3, setData3] = useState('')
@@ -12,13 +19,24 @@ const DescribeYourBusiness = ({ nextIncrease, handleData }) => {
     const [data8, setData8] = useState('')
     // console.log(data1);
 
+
+
     const sendData = () => {
-        const selectedData1 = {
-            data1, data2, data3, data4, data5, data6, data7, data8
-        }
-        handleData(selectedData1)
-        nextIncrease(2)
+        const describeYourBusiness = [data1, data2, data3, data4, data5, data6, data7, data8]
+        fetch(`http://localhost:5055/api/user/${userInfo?._id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ describeYourBusiness })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                dispatch(setNextIncrease('2'))
+            })
     }
+
     return (
         <div className='py-16'>
             <h1 className='text-center font-semibold text-black text-2xl px-4'>How would you describe your business?</h1>

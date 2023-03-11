@@ -8,10 +8,27 @@ import '../../app/globals.css'
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { setName } from '@/Slices/controllerSlice';
+import { useRouter } from 'next/router';
 const index = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
+    const router = useRouter()
+
     const handleLogin = (data) => {
-        console.log(data);
+        fetch(`http://localhost:5055/api/user/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                localStorage.setItem('glampcity-token', data.token)
+                alert('User Login Successfull')
+                if (data?.token) {
+                    router.push('/home')
+                }
+            })
     }
 
 

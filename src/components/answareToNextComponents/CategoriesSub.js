@@ -1,16 +1,33 @@
+import { useAuth } from '@/Hooks/getAuth';
+import { setNextIncrease } from '@/Slices/loginRegisterSlice';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-const CategoriesSub = ({ nextIncrease, handleData }) => {
+const CategoriesSub = () => {
+    const dispatch = useDispatch()
+    const userInfo = useAuth()
     const [data1, setData1] = useState('')
     const [data2, setData2] = useState('')
     const [data3, setData3] = useState('')
 
     const sendData = () => {
-        const selectedData1 = {
-            data1
+        const reverentSubCategories = {
+            electronics: data1,
+            tents: data2,
+            autoAndTransportation: data3,
         }
-        handleData(selectedData1)
-        nextIncrease(3)
+        fetch(`http://localhost:5055/api/user/${userInfo?._id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ reverentSubCategories })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                dispatch(setNextIncrease('3'))
+            })
     }
     return (
         <div className='py-16'>

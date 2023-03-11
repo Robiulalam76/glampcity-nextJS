@@ -6,6 +6,7 @@ import store from '@/store';
 
 
 const Main = ({ components, children }) => {
+
     return (
         <>
             <Provider store={store}>

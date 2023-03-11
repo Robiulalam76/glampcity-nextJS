@@ -3,6 +3,7 @@ import right from '../../../assets/icons/buyer-welcome-page-icons/right.png'
 import blueRight from '../../../assets/icons/buyer-welcome-page-icons/blue-right.png'
 import grayRight from '../../../assets/icons/buyer-welcome-page-icons/gray-right.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const RegisterComplete = () => {
     return (
@@ -20,9 +21,9 @@ const RegisterComplete = () => {
                                 <h1 className='text-gray-400 text-xl'>D*******@Gmail.com</h1>
                             </div>
                             <h1 className='text-gray-500 text-xl text-left'>Tell us about your sourcing to personalize your account. </h1>
-                            <div className='flex justify-center items-center w-40 h-12 rounded-md bg-primary'>
+                            <Link href='/personalize' className='flex justify-center items-center w-40 h-12 rounded-md bg-primary'>
                                 <button className='text-white text-xl font-semibold'>Personalize</button>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

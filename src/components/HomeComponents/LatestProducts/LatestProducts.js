@@ -17,7 +17,8 @@ const latestProducts = [
     { id: '6', img: img6, title: 'Nike Shoes - Men', price: '3, 999', description: 'Lorem ipsum dolor sit amet consectetur.' },
 ]
 
-const LatestProducts = () => {
+const LatestProducts = (props) => {
+    console.log(props);
 
     return (
         <div className='rounded-3xl md:p-4 mt-8'>
@@ -34,5 +35,17 @@ const LatestProducts = () => {
         </div>
     );
 };
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+
+    const res = await fetch(`http://localhost:5055/api/products`)
+    const data = await res.json()
+
+    console.log(data);
+
+    // Pass data to the page via props
+    return { props: { data } }
+}
 
 export default LatestProducts;

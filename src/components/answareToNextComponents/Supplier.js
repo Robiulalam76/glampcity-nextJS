@@ -1,7 +1,11 @@
-import Link from 'next/link';
+import { useAuth } from '@/Hooks/getAuth';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 
-const Supplier = ({ nextIncrease, handleData }) => {
+const Supplier = () => {
+    const userInfo = useAuth()
+    const router = useRouter()
+
     const [data1, setData1] = useState('')
     const [data2, setData2] = useState('')
     const [data3, setData3] = useState('')
@@ -13,10 +17,19 @@ const Supplier = ({ nextIncrease, handleData }) => {
     // console.log(data1);
 
     const sendData = () => {
-        const selectedData1 = {
-            data1, data2, data3, data4, data5, data6, data7, data8
-        }
-        handleData(selectedData1)
+        const supplier = [data1, data2, data3, data4, data5, data6, data7, data8];
+        fetch(`http://localhost:5055/api/user/${userInfo?._id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ supplier })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                router.push('/home')
+            })
     }
     return (
         <div className='py-16'>
@@ -58,9 +71,9 @@ const Supplier = ({ nextIncrease, handleData }) => {
                 </div>
 
                 {
-                    data1 || data2 || data3 || data4 || data5 || data6 || data7 || data8 ? <Link href='/' onClick={() => sendData()} type="submit" className='w-36 h-10 mx-auto mt-8 flex justify-center items-center rounded-md bg-primary text-white font-bold'>
+                    data1 || data2 || data3 || data4 || data5 || data6 || data7 || data8 ? <button onClick={() => sendData()} type="submit" className='w-36 h-10 mx-auto mt-8 flex justify-center items-center rounded-md bg-primary text-white font-bold'>
                         <h1>Next</h1>
-                    </Link>
+                    </button>
                         :
                         <button disabled className='cursor-not-allowed w-36 h-10 mx-auto mt-8 flex justify-center items-center rounded-md bg-[#0029FF59] text-white font-bold'>
                             <h1>Next</h1>
