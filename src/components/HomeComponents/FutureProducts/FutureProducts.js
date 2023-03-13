@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import img from '../../../assets/images/future-products-images/img1.png'
+import profile from '../../../assets/images/future-products-images/img.png'
 import img1 from '../../../assets/images/new-arrival-images/img1.png'
 import img3 from '../../../assets/images/new-arrival-images/img3.png'
 import img4 from '../../../assets/images/new-arrival-images/img4.png'
@@ -22,23 +23,41 @@ const FutureProducts = () => {
             <h1 className='text-gray-900 text-3xl text-center font-semibold mb-5'>Featured Products from <strong>Verified Suppliers</strong></h1>
             <div className='mt-16 md:mt-28'>
                 <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8'>
-                    <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                    <div className='w-fit h-fit flex justify-center items-center mx-auto rounded-full border-[12px] md:border-[20px] border-gray-400 relative'>
+                        <Image className='w-32 md:w-60 h-32 md:h-60 rounded-full border-[8px] md:border-[14px] border-white' src={profile} alt="" />
+                        <div className='absolute w-[124px] md:w-56 h-8 md:h-10 bg-white flex justify-center items-center'>
+                            <span className='text-black font-semibold text-sm'>Tuhfa Collection</span>
+                        </div>
                     </div>
-                    <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                    <div className='w-fit h-fit flex justify-center items-center mx-auto rounded-full border-[12px] md:border-[20px] border-gray-400 relative'>
+                        <Image className='w-32 md:w-60 h-32 md:h-60 rounded-full border-[8px] md:border-[14px] border-white' src={profile} alt="" />
+                        <div className='absolute w-[124px] md:w-56 h-8 md:h-10 bg-white flex justify-center items-center'>
+                            <span className='text-black font-semibold text-sm'>Tuhfa Collection</span>
+                        </div>
                     </div>
-                    <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                    <div className='w-fit h-fit flex justify-center items-center mx-auto rounded-full border-[12px] md:border-[20px] border-gray-400 relative'>
+                        <Image className='w-32 md:w-60 h-32 md:h-60 rounded-full border-[8px] md:border-[14px] border-white' src={profile} alt="" />
+                        <div className='absolute w-[124px] md:w-56 h-8 md:h-10 bg-white flex justify-center items-center'>
+                            <span className='text-black font-semibold text-sm'>Tuhfa Collection</span>
+                        </div>
                     </div>
-                    <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                    <div className='w-fit h-fit flex justify-center items-center mx-auto rounded-full border-[12px] md:border-[20px] border-gray-400 relative'>
+                        <Image className='w-32 md:w-60 h-32 md:h-60 rounded-full border-[8px] md:border-[14px] border-white' src={profile} alt="" />
+                        <div className='absolute w-[124px] md:w-56 h-8 md:h-10 bg-white flex justify-center items-center'>
+                            <span className='text-black font-semibold text-sm'>Tuhfa Collection</span>
+                        </div>
                     </div>
-                    <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                    <div className='w-fit h-fit flex justify-center items-center mx-auto rounded-full border-[12px] md:border-[20px] border-gray-400 relative'>
+                        <Image className='w-32 md:w-60 h-32 md:h-60 rounded-full border-[8px] md:border-[14px] border-white' src={profile} alt="" />
+                        <div className='absolute w-[124px] md:w-56 h-8 md:h-10 bg-white flex justify-center items-center'>
+                            <span className='text-black font-semibold text-sm'>Tuhfa Collection</span>
+                        </div>
                     </div>
-                    <div className='relative w-36 md:w-80 h-36 md:h-80 mx-auto rounded-full bg-gray-600'>
-                        <Image className='w-36 md:w-80 h-36 md:h-80 rounded-full' src={img} alt="" />
+                    <div className='w-fit h-fit flex justify-center items-center mx-auto rounded-full border-[12px] md:border-[20px] border-gray-400 relative'>
+                        <Image className='w-32 md:w-60 h-32 md:h-60 rounded-full border-[8px] md:border-[14px] border-white' src={profile} alt="" />
+                        <div className='absolute w-[124px] md:w-56 h-8 md:h-10 bg-white flex justify-center items-center'>
+                            <span className='text-black font-semibold text-sm'>Tuhfa Collection</span>
+                        </div>
                     </div>
                 </div>
                 <div className='flex justify-center items-center bg-primary h-14 md:w-60 mt-20 mx-auto'>

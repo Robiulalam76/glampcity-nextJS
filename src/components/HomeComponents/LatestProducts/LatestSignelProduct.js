@@ -9,6 +9,8 @@ const LatestSignelProduct = ({ product, wishlistItem }) => {
     const { wishlistItems, cartItems } = useSelector((state) => state.controllerSlice)
     const dispatch = useDispatch()
 
+    console.log(wishlistItems);
+
     const wishlised = wishlistItems.find(w => w.id === product.id)
 
     const handleWishlistRemove = (id) => {

@@ -23,29 +23,22 @@ const index = () => {
         })
             .then(res => res.json())
             .then(data => {
+                if (data?.login === false) {
+                    alert(data?.message)
+                }
                 localStorage.setItem('glampcity-token', data.token)
-                alert('User Login Successfull')
                 if (data?.token) {
-                    router.push('/home')
+                    const token = localStorage.getItem('glampcity-token')
+                    if (token) {
+                        router.push('/home')
+                        alert('User Login Successfull')
+                    }
                 }
             })
     }
 
-
-    const { name } = useSelector((state) => state.controllerSlice)
-    const dispatch = useDispatch()
-    const submitData = () => {
-        dispatch(setName('Sakil Khan'))
-    }
-
     return (
         <div className='bg-[#F5F5F5] min-w-full md:min-h-screen'>
-
-            <div>
-                <h1>my name is: {name}</h1>
-                <input type="text" onChange={(e) => dispatch(setName(e.target.value))} />
-                <button onClick={() => submitData()}>submit</button>
-            </div>
             <div className='max-w-[1440px] mx-auto md:pt-16'>
                 <div className='w-full md:w-[550px] bg-white py-8 rouonded-xl md:shadow-md md:border mx-auto'>
                     <h1 className='text-3xl font-bold text-center text-primary py-6'>Log In</h1>

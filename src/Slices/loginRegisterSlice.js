@@ -24,13 +24,6 @@ const initialState = {
 
     // persolnalize
     nextIncrease: '1',
-    describeYourBusiness: [],
-    reverentSubCategories: {
-        electronics: '',
-        tents: '',
-        autoAndTransportation: '',
-    },
-    supplier: [],
 };
 
 export const loginRegisterSlice = createSlice({
@@ -62,15 +55,6 @@ export const loginRegisterSlice = createSlice({
         setNextIncrease: (state, action) => {
             state.nextIncrease = action.payload;
         },
-        setDescribeYourBusiness: (state, action) => {
-            state.describeYourBusiness = action.payload;
-        },
-        setReverentSubCategories: (state, action) => {
-            state.reverentSubCategories = action.payload;
-        },
-        setSupplier: (state, action) => {
-            state.supplier = action.payload;
-        },
     },
 });
 
@@ -82,8 +66,5 @@ export const {
     setRole,
     setPasswordError,
     setNextIncrease,
-    setDescribeYourBusiness,
-    setReverentSubCategories,
-    setSupplier
 } = loginRegisterSlice.actions;
 export default loginRegisterSlice.reducer;
